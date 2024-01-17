@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0.410-focal as build
+FROM mcr.microsoft.com/dotnet/sdk:8.0.101-jammy-amd64 as build
 
 COPY . /source
 
@@ -6,7 +6,7 @@ WORKDIR /source/NotiGest
 RUN dotnet restore \
     && dotnet publish --configuration Release -o /publish
 
-FROM mcr.microsoft.com/dotnet/aspnet:6.0.18-focal as runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0.1-jammy-amd64 as runtime
 
 LABEL MAINTAINER Gustavolores15@gmail.com
 EXPOSE 5000
