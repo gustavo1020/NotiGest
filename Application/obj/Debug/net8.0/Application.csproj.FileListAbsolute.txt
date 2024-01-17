@@ -1,0 +1,15 @@
+A:\VS2022\NotiGest\Application\bin\Debug\net8.0\Application.deps.json
+A:\VS2022\NotiGest\Application\bin\Debug\net8.0\Application.dll
+A:\VS2022\NotiGest\Application\bin\Debug\net8.0\Application.pdb
+A:\VS2022\NotiGest\Application\bin\Debug\net8.0\Core.dll
+A:\VS2022\NotiGest\Application\bin\Debug\net8.0\Core.pdb
+A:\VS2022\NotiGest\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+A:\VS2022\NotiGest\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+A:\VS2022\NotiGest\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+A:\VS2022\NotiGest\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+A:\VS2022\NotiGest\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+A:\VS2022\NotiGest\Application\obj\Debug\net8.0\Application.csproj.CopyComplete
+A:\VS2022\NotiGest\Application\obj\Debug\net8.0\Application.dll
+A:\VS2022\NotiGest\Application\obj\Debug\net8.0\refint\Application.dll
+A:\VS2022\NotiGest\Application\obj\Debug\net8.0\Application.pdb
+A:\VS2022\NotiGest\Application\obj\Debug\net8.0\ref\Application.dll

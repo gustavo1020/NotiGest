@@ -1,0 +1,6 @@
+@NotiGest_HostAddress = http://localhost:5134
+
+GET {{NotiGest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
