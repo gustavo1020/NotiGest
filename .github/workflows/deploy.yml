@@ -37,5 +37,5 @@ jobs:
         
     - name: build and push image ${{ github.ref_name }}
       run: |
-        docker build -t gustavovl/notigest-api:$BRANCH .
-        docker push gustavovl/notigest-api:$BRANCH
+        docker build -t gustavovl/notigest-back:$BRANCH .
+        docker push gustavovl/notigest-back:$BRANCH
