@@ -13,22 +13,18 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
 
-  nginx_RRHH:
-    image: 'jc21/nginx-proxy-manager:latest'
-    restart: unless-stopped
+  notigest-api:
+    image: 'gustavovl/notigest-back:main'
+    container_name: notigest-back
+    restart: always
     ports:
-      - '80:80'
-      - '81:81'
-      - '443:443'
+      - 5000:5000
 
-  nginx_RRHH:
-    image: 'jc21/nginx-proxy-manager:latest'
-    restart: unless-stopped
+  notigest:
+    image: 'gustavovl/notigest-front:main'
+    restart: always
     ports:
-      - '80:80'
-      - '81:81'
-      - '443:443'
-
+      - 80:80
       
 networks:
   default:
