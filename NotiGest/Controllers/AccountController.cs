@@ -1,5 +1,6 @@
 ﻿using Application.Contracts;
 using Application.DTO;
+using Core.Entityes;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +12,10 @@ namespace NotiGest.Controllers
     [Route("api/v1/[controller]/[action]")]
     public class AccountController : ControllerBase
     {
-        private readonly UserManager<UsuarioDto> _userManager;
-        private readonly SignInManager<UsuarioDto> _signInManager;
+        private readonly UserManager<User> _userManager;
+        private readonly SignInManager<User> _signInManager;
         private readonly IJwtService _jwt;
-        public AccountController(UserManager<UsuarioDto> userManager, SignInManager<UsuarioDto> signInManager, IJwtService jwt)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IJwtService jwt)
         {
             this._userManager = userManager;
             this._signInManager = signInManager;
@@ -26,7 +27,7 @@ namespace NotiGest.Controllers
         {
             try
             {
-                var entityUser = usuarioDto.Adapt<UsuarioDto>();
+                var entityUser = usuarioDto.Adapt<User>();
 
                 var usercreate = await _userManager.CreateAsync(entityUser, usuarioDto.Password ?? string.Empty);
 
@@ -53,7 +54,7 @@ namespace NotiGest.Controllers
         {
             try
             {
-                var user = await _userManager.FindByEmailAsync(usuarioDto.Email ?? string.Empty) ?? new UsuarioDto { };
+                var user = await _userManager.FindByEmailAsync(usuarioDto.Email ?? string.Empty) ?? new User { };
 
                 if (user == null) return BadRequest("Credenciales inválidas");
 

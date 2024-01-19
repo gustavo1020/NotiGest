@@ -10,3 +10,16 @@ A:\VS2022\NotiGest\Core\obj\Debug\net8.0\Core.dll
 A:\VS2022\NotiGest\Core\obj\Debug\net8.0\refint\Core.dll
 A:\VS2022\NotiGest\Core\obj\Debug\net8.0\Core.pdb
 A:\VS2022\NotiGest\Core\obj\Debug\net8.0\ref\Core.dll
+G:\Novit\NotiGest\Core\bin\Debug\net8.0\Core.deps.json
+G:\Novit\NotiGest\Core\bin\Debug\net8.0\Core.dll
+G:\Novit\NotiGest\Core\bin\Debug\net8.0\Core.pdb
+G:\Novit\NotiGest\Core\obj\Debug\net8.0\Core.csproj.AssemblyReference.cache
+G:\Novit\NotiGest\Core\obj\Debug\net8.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\Novit\NotiGest\Core\obj\Debug\net8.0\Core.AssemblyInfoInputs.cache
+G:\Novit\NotiGest\Core\obj\Debug\net8.0\Core.AssemblyInfo.cs
+G:\Novit\NotiGest\Core\obj\Debug\net8.0\Core.csproj.CoreCompileInputs.cache
+G:\Novit\NotiGest\Core\obj\Debug\net8.0\Core.sourcelink.json
+G:\Novit\NotiGest\Core\obj\Debug\net8.0\Core.dll
+G:\Novit\NotiGest\Core\obj\Debug\net8.0\refint\Core.dll
+G:\Novit\NotiGest\Core\obj\Debug\net8.0\Core.pdb
+G:\Novit\NotiGest\Core\obj\Debug\net8.0\ref\Core.dll

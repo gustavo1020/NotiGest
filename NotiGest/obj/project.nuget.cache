@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JBcb1yG157ut2yXLKd0B4DBp47mlTSW1CIahls6eCwLF1osQHPSIZO0HFkY75swT4ayQUlxyMYwwjBnxnzMuew==",
+  "dgSpecHash": "TTMYKMTdwNFYnGWuPtz9i7mBnXEagcZKpYJq6qnUd22/VgIqRuKqAb7PzSmahy/h5XOb2ubI9awhGkPE0ktKBg==",
   "success": true,
-  "projectFilePath": "A:\\VS2022\\NotiGest\\NotiGest\\NotiGest.csproj",
+  "projectFilePath": "G:\\Novit\\NotiGest\\NotiGest\\NotiGest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gustavo\\.nuget\\packages\\aspnetcore.healthchecks.hangfire\\8.0.0\\aspnetcore.healthchecks.hangfire.8.0.0.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\aspnetcore.healthchecks.sqlserver\\8.0.0\\aspnetcore.healthchecks.sqlserver.8.0.0.nupkg.sha512",

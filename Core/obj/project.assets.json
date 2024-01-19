@@ -817,11 +817,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\VS2022\\NotiGest\\Core\\Core.csproj",
+      "projectUniqueName": "G:\\Novit\\NotiGest\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "A:\\VS2022\\NotiGest\\Core\\Core.csproj",
+      "projectPath": "G:\\Novit\\NotiGest\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-      "outputPath": "A:\\VS2022\\NotiGest\\Core\\obj\\",
+      "outputPath": "G:\\Novit\\NotiGest\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

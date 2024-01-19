@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NBnOiWZ7MmlCmhklf0CvoePMDet+H1didSGuI4rCgWCBXMRWYpsIxqWJNPV8J/G8h39zwvUC3oQBZ0WuLb8elQ==",
+  "dgSpecHash": "FzOMqyYdjMybUgad7/d/3BUfYTgx9OSY+H5BEPmjK8PTqBC1PZs4RG1IdkOEYTUklxiwZbHnYBveG4piCe4RLQ==",
   "success": true,
-  "projectFilePath": "A:\\VS2022\\NotiGest\\Core\\Core.csproj",
+  "projectFilePath": "G:\\Novit\\NotiGest\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gustavo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.1\\microsoft.aspnetcore.cryptography.internal.8.0.1.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.1\\microsoft.aspnetcore.cryptography.keyderivation.8.0.1.nupkg.sha512",

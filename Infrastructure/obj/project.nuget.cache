@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kU90lJaQP2kq+nAjV7QEXbUVdu8JSCXFnE2j56LlIz3fs+iLJKgcrEjD3k/mr80s5Hi2QjZL4L+/bSADUFPK/g==",
+  "dgSpecHash": "ji6ribfT313SYGdtN21uowrB1QkyZBUdc9pjCvDKPknhFJ86RMgBi2fel+KsGLKo5ghZxFqG0KoQN3w9TqMz+g==",
   "success": true,
-  "projectFilePath": "A:\\VS2022\\NotiGest\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "G:\\Novit\\NotiGest\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gustavo\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

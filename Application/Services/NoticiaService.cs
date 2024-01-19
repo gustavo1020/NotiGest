@@ -127,7 +127,12 @@ namespace NotiGest.Services
         {
             try
             {
-                var queryableNoticias = await _redisService.SerchCache(key); ;
+                var queryableNoticias = await _redisService.SerchCache(key);
+
+                if (queryableNoticias.Count() == 0)
+                {
+                    queryableNoticias = await GetNoticias();
+                }
 
                 var noticiasFilters = queryableNoticias.Skip(predicateNoticia.cantItemForPage * predicateNoticia.pageNumber).Take(predicateNoticia.cantItemForPage).ToList();
 

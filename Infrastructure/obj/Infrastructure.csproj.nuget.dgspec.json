@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\VS2022\\NotiGest\\Infrastructure\\Infrastructure.csproj": {}
+    "G:\\Novit\\NotiGest\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "A:\\VS2022\\NotiGest\\Application\\Application.csproj": {
+    "G:\\Novit\\NotiGest\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\VS2022\\NotiGest\\Application\\Application.csproj",
+        "projectUniqueName": "G:\\Novit\\NotiGest\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "A:\\VS2022\\NotiGest\\Application\\Application.csproj",
+        "projectPath": "G:\\Novit\\NotiGest\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-        "outputPath": "A:\\VS2022\\NotiGest\\Application\\obj\\",
+        "outputPath": "G:\\Novit\\NotiGest\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -36,8 +36,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "A:\\VS2022\\NotiGest\\Core\\Core.csproj": {
-                "projectPath": "A:\\VS2022\\NotiGest\\Core\\Core.csproj"
+              "G:\\Novit\\NotiGest\\Core\\Core.csproj": {
+                "projectPath": "G:\\Novit\\NotiGest\\Core\\Core.csproj"
               }
             }
           }
@@ -101,14 +101,14 @@
         }
       }
     },
-    "A:\\VS2022\\NotiGest\\Core\\Core.csproj": {
+    "G:\\Novit\\NotiGest\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\VS2022\\NotiGest\\Core\\Core.csproj",
+        "projectUniqueName": "G:\\Novit\\NotiGest\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "A:\\VS2022\\NotiGest\\Core\\Core.csproj",
+        "projectPath": "G:\\Novit\\NotiGest\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-        "outputPath": "A:\\VS2022\\NotiGest\\Core\\obj\\",
+        "outputPath": "G:\\Novit\\NotiGest\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -170,14 +170,14 @@
         }
       }
     },
-    "A:\\VS2022\\NotiGest\\Infrastructure\\Infrastructure.csproj": {
+    "G:\\Novit\\NotiGest\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\VS2022\\NotiGest\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "G:\\Novit\\NotiGest\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "A:\\VS2022\\NotiGest\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "G:\\Novit\\NotiGest\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-        "outputPath": "A:\\VS2022\\NotiGest\\Infrastructure\\obj\\",
+        "outputPath": "G:\\Novit\\NotiGest\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -202,8 +202,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "A:\\VS2022\\NotiGest\\Application\\Application.csproj": {
-                "projectPath": "A:\\VS2022\\NotiGest\\Application\\Application.csproj"
+              "G:\\Novit\\NotiGest\\Application\\Application.csproj": {
+                "projectPath": "G:\\Novit\\NotiGest\\Application\\Application.csproj"
               }
             }
           }

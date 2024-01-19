@@ -18,6 +18,10 @@ namespace Application.Services
 
             var listaDesdeRedis = await database.StringGetAsync(key);
 
+            if (listaDesdeRedis.IsNullOrEmpty)
+            {
+                return Enumerable.Empty<T>();
+            }
             var listaRecuperada = JsonSerializer.Deserialize<List<T>>(listaDesdeRedis.ToString()) ?? new List<T> { };
 
             return listaRecuperada;
