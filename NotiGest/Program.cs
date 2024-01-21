@@ -26,6 +26,8 @@ builder.Services.AddFluentValidationd();
 builder.Services.AddMapster();
 builder.Services.AddHangfireServer();
 builder.Services.AddRedis(builder);
+builder.Services.AddHangfireService();
+builder.Services.AddRestService();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,4 +1,5 @@
-﻿using Application.Contracts;
+﻿using Application.BackgroundService;
+using Application.Contracts;
 using Application.Services;
 using Application.Validator;
 using Core.Entityes;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NotiGest.Services;
+using RestSharp;
 using StackExchange.Redis;
 using System.Reflection;
 
@@ -42,9 +44,14 @@ namespace Application
             services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(webApplicationBuilder.Configuration.GetConnectionString("Redis") ?? "localhost:6379,abortConnect=false"));
         }
 
-        public static void AddHangfireService()
+        public static void AddHangfireService(this IServiceCollection services)
         {
+            services.AddScoped(typeof(ITaskNoticiaService), typeof(TaskNoticiaService));
+        }
 
+        public static void AddRestService(this IServiceCollection services)
+        {
+            services.AddSingleton(new RestClient(new HttpClient()));
         }
     }
 }

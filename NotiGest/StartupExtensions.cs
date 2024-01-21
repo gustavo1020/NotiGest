@@ -1,4 +1,5 @@
-﻿using Application.DTO;
+﻿using Application.BackgroundService;
+using Application.DTO;
 using AspNetCoreRateLimit;
 using Core.Entityes;
 using Hangfire;
@@ -33,6 +34,7 @@ namespace NotiGest
         }
         public static async void AddUsersConfig(this WebApplication webApplication)
         {
+            RecurringJob.AddOrUpdate<TaskNoticiaService>("XXX--000", x => x.GenerarNoticias(), "0 0 31 * *");
             webApplication.MapGroup("/api/v1/Account").MapIdentityApi<User>().WithTags("Account");
 
             using (var scope = webApplication.Services.CreateScope())

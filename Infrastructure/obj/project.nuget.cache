@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ji6ribfT313SYGdtN21uowrB1QkyZBUdc9pjCvDKPknhFJ86RMgBi2fel+KsGLKo5ghZxFqG0KoQN3w9TqMz+g==",
+  "dgSpecHash": "qFh1HgwHDz5/Z91hZ5RTscGDxmUbY41J81QIeCZ1MgPd9aQTjZVrcDxgofJnJaSCSyf38cLkgWCY5yzKix1wAg==",
   "success": true,
   "projectFilePath": "G:\\Novit\\NotiGest\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -80,6 +80,7 @@
     "C:\\Users\\Gustavo\\.nuget\\packages\\newtonsoft.json\\11.0.1\\newtonsoft.json.11.0.1.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\nredisstack\\0.11.0\\nredisstack.0.11.0.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\Gustavo\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\stackexchange.redis\\2.6.122\\stackexchange.redis.2.6.122.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",

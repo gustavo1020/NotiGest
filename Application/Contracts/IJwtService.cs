@@ -2,6 +2,6 @@
 {
     public interface IJwtService
     {
-        dynamic GenerateToken(string username, IList<string> rol);
+        dynamic GenerateToken(string email, IList<string> rol, Guid id, string username);
     }
 }

@@ -79,6 +79,10 @@
             "NRedisStack": {
               "target": "Package",
               "version": "[0.11.0, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[110.2.0, )"
             }
           },
           "imports": [

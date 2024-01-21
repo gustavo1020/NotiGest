@@ -18,7 +18,7 @@ namespace NotiGest.Services
             this._httpContextAccessor = httpContextAccessor;
         }
 
-        public dynamic GenerateToken(string username, IList<string> rol)
+        public dynamic GenerateToken(string email, IList<string> rol, Guid id, string username)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"] ?? string.Empty);
@@ -27,6 +27,8 @@ namespace NotiGest.Services
 
             // Agrega los roles como claims
             claims.AddRange(rol.Select(role => new Claim(ClaimTypes.Role, role)));
+            claims.Add(new Claim("id", id.ToString()));
+            claims.Add(new Claim("email", email));
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {

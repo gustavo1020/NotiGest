@@ -64,7 +64,7 @@ namespace NotiGest.Controllers
 
                 var result = await _signInManager.PasswordSignInAsync(user, usuarioDto.Password ?? string.Empty, false, lockoutOnFailure: false);
 
-                if (result.Succeeded) return Ok(_jwt.GenerateToken(user.Email ?? string.Empty, userRol));
+                if (result.Succeeded) return Ok(_jwt.GenerateToken(user.Email ?? string.Empty, userRol, user.Id, user.UserName));
 
                 if (result.IsLockedOut) return BadRequest("La cuenta está bloqueada");
 

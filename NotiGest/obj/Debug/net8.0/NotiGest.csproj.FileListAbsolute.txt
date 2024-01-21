@@ -357,3 +357,4 @@ G:\Novit\NotiGest\NotiGest\obj\Debug\net8.0\refint\NotiGest.dll
 G:\Novit\NotiGest\NotiGest\obj\Debug\net8.0\NotiGest.pdb
 G:\Novit\NotiGest\NotiGest\obj\Debug\net8.0\NotiGest.genruntimeconfig.cache
 G:\Novit\NotiGest\NotiGest\obj\Debug\net8.0\ref\NotiGest.dll
+G:\Novit\NotiGest\NotiGest\bin\Debug\net8.0\RestSharp.dll
