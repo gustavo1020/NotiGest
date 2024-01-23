@@ -31,6 +31,9 @@ A continuación, se proporciona información sobre la configuración necesaria p
 para su ejecucion local puedo obtar por usar el docker-compose con el comando 'docker-compose up -d' y levantar el entorno de pruebas o ejecutar los proyectos individuales 
 
 el proyecto back esta desarrollado con .net 8 y el del front node 20 y angular 17
+
+[proyecto front](https://github.com/gustavo1020/NotiGestFront)
+
 1- primero que nada generando la migration con el comando 'migrations add InicialCreate --output-dir Migrations/notigest --context NotiGestDbContext --project Infrastructure --startup-project NotiGest' este paso no es necesario 
 2- 'dotnet ef database update --context NotiGestDbContext --project Infrastructure --startup-project NotiGest'
 
