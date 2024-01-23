@@ -16,16 +16,28 @@ services:
   notigest-api:
     image: 'gustavovl/notigest-back:main'
     container_name: notigest-back
+    environment:
+      - ConnectionStrings__NotiGestConnection=Server=localhost\\SQLEXPRESS;Database=NotiGest;User ID=sa;Password=pass123;Trusted_Connection=False;Connection Timeout=60000;Pooling=True;Min Pool Size=1;Max Pool Size=300;MultipleActiveResultSets=True;TrustServerCertificate=True
+      - ConnectionStrings__Hangfire=Server=localhost\\SQLEXPRESS;Database=NotiGest;User ID=sa;Password=pass123;Trusted_Connection=False;Connection Timeout=60000;Pooling=True;Min Pool Size=1;Max Pool Size=300;MultipleActiveResultSets=True;TrustServerCertificate=True
+      - ConnectionStrings__Redis=localhost:6379,abortConnect=false
     restart: always
     ports:
       - 5000:5000
 
   notigest:
     image: 'gustavovl/notigest-front:main'
+    environment:
+      - apiUrl=https://localhost:7086/api/v1
     restart: always
     ports:
       - 80:80
-      
+
+  redis:
+    image: 'redis:latest'
+    restart: always
+    ports:
+       - 6379:6379
+    
 networks:
   default:
     external:
