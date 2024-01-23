@@ -28,7 +28,7 @@ Además, la aplicación incluye una integración con Entity Framework (EF) para 
 
 A continuación, se proporciona información sobre la configuración necesaria para ejecutar la aplicación localmente y para su despliegue, actualmente tiene un action que se encarga de ejecutar el dockerfile y subir la imagen al registry de docker
 
-para su ejecucion local puedo obtar por usar el docker-compose con el comando 'docker-compose up -d' y levantar el entorno de pruebas o ejecutar los proyectos individuales 
+para su ejecucion local puede obtar por usar el docker-compose con el comando 'docker-compose up -d' y levantar el entorno de pruebas (recuerde crear la network con 'docker network create NotiGest')o ejecutar los proyectos individuales 
 
 el proyecto back esta desarrollado con .net 8 y el del front node 20 y angular 17 y tener en cuenta el uso tanto de redis cache desde un container de docker y las configuraciones en las URL y conexiones a la base de datos del back 
 
