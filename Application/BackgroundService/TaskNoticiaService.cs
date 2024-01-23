@@ -36,7 +36,8 @@ namespace Application.BackgroundService
                 {
                     noticiasDto.Usuario = user.Id;
                     noticiasDto.EnlaceImagen = "https://www.oas.org/ext/Portals/14/EasyDNNnews/1892/Image.jpg";
-
+                    noticiasDto.Contenido = noticiasDto.Contenido.Count() >= 500 ? noticiasDto.Contenido.Substring(0, 400) : noticiasDto.Contenido;
+                    noticiasDto.Titulo = noticiasDto.Titulo.Count() >= 50 ? noticiasDto.Titulo.Substring(0, 45) : noticiasDto.Titulo;
                     await _noticiaService.Crear(noticiasDto);
                 }
             }

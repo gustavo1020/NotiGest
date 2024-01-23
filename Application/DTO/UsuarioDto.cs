@@ -11,4 +11,12 @@ namespace Application.DTO
         public string? Email { get; set; }
         public string? Password { get; set; }
     }
+    public class UserGet
+    {
+        public string? UserName { get; set; }
+        public string? Email { get; set; }
+        public string? passwordHash { get; set; }
+        public DateTime createdDate { get; set; }
+        public string? phoneNumber { get; set; }
+    }
 }

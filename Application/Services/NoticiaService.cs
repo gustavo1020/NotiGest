@@ -9,6 +9,7 @@ using Application.Contracts;
 using Application.DTO;
 using Application.Page;
 using Application.Utils;
+using System.Linq;
 
 namespace NotiGest.Services
 {
@@ -44,14 +45,15 @@ namespace NotiGest.Services
 #pragma warning disable CS4014
 
                 // No esperamos a que la tarea en paralelo se complete
-                Task.Run(async () => await _redisService.SaveCache(key, await GetNoticias()));
+                await Task.Run(async () => await _redisService.SaveCache(key, await GetNoticias()));
 
 #pragma warning restore CS4014
 
                 return new OkObjectResult(new { Mensaje = "Noticia creada exitosamente", Exitoso = state });
             }
-            catch (Exception ex)
+            catch (DbUpdateException ex)
             {
+                var innerException = ex.InnerException;
                 return new BadRequestObjectResult(new { Mensaje = "Error al crear la noticia", Errores = ex.Message, Exitoso = false });
             }
 
@@ -79,7 +81,7 @@ namespace NotiGest.Services
 #pragma warning disable CS4014
 
                 // No esperamos a que la tarea en paralelo se complete
-                Task.Run(async () => await _redisService.SaveCache(key, await GetNoticias()));
+                await Task.Run(async () => await _redisService.SaveCache(key, await GetNoticias()));
 
 #pragma warning restore CS4014
 
@@ -111,7 +113,7 @@ namespace NotiGest.Services
 #pragma warning disable CS4014
 
                 // No esperamos a que la tarea en paralelo se complete
-                Task.Run(async () => await _redisService.SaveCache(key, await GetNoticias()));
+                await Task.Run(async () => await _redisService.SaveCache(key, await GetNoticias()));
 
 #pragma warning restore CS4014
 
@@ -123,10 +125,11 @@ namespace NotiGest.Services
             }
 
         }
-        public async Task<IActionResult> ObtenerTodo(Filter predicateNoticia)
+        public async Task<IActionResult> ObtenerTodo(Filter predicateNoticia, string text)
         {
             try
             {
+                var palabras = text.ToLower().Split(' ');
                 var queryableNoticias = await _redisService.SerchCache(key);
 
                 if (queryableNoticias.Count() == 0)
@@ -134,12 +137,13 @@ namespace NotiGest.Services
                     queryableNoticias = await GetNoticias();
                 }
 
+                if (text.Trim() != string.Empty) queryableNoticias = queryableNoticias.Where(x => palabras.Any(palabra => x.Titulo.ToLower().Contains(palabra)));
+
+                if (predicateNoticia.nuevos) queryableNoticias = queryableNoticias.OrderByDescending(x => x.CreatedDate).ToList();
+
+                if (predicateNoticia.prioridad) queryableNoticias = queryableNoticias.OrderByDescending(x => x.Destacado == true).ToList();
+
                 var noticiasFilters = queryableNoticias.Skip(predicateNoticia.cantItemForPage * predicateNoticia.pageNumber).Take(predicateNoticia.cantItemForPage).ToList();
-
-                if (predicateNoticia.nuevos) noticiasFilters = noticiasFilters.OrderByDescending(x => x.CreatedDate).ToList();
-
-                if (predicateNoticia.prioridad) noticiasFilters = noticiasFilters.OrderByDescending(x => x.Destacado == true).ToList();
-
 
                 var noticiasDto = noticiasFilters.Adapt<IEnumerable<NoticiaDto>>();
 

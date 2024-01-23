@@ -1,9 +1,13 @@
 ﻿using Application.Contracts;
 using Application.DTO;
+using Application.Page;
 using Core.Entityes;
 using Mapster;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace NotiGest.Controllers
 {
@@ -74,6 +78,15 @@ namespace NotiGest.Controllers
             {
                 return StatusCode(500, ex.Message);
             }
+        }
+
+        [Authorize(Roles = "Administrador")]
+        [HttpGet("getall")]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            var users = await _userManager.Users.ToListAsync();
+        
+            return Ok(users.Adapt<List<UserGet>>());
         }
     }
 }

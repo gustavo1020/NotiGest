@@ -20,12 +20,12 @@ namespace NotiGest.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<Paginated<NoticiaDto>>> GetAll(int cantItemForPage = 10, int pageNumber = 0, bool nuevos = false, bool prioridad = false)
+        public async Task<ActionResult<Paginated<NoticiaDto>>> GetAll(int cantItemForPage = 10, int pageNumber = 0, bool nuevos = false, bool prioridad = false, string text = "")
         {
             try
             {
                 Filter predicateNoticia = new Filter() { cantItemForPage = cantItemForPage, pageNumber = pageNumber, nuevos = nuevos, prioridad = prioridad };
-                var noticias = await _NoticiaService.ObtenerTodo(predicateNoticia);
+                var noticias = await _NoticiaService.ObtenerTodo(predicateNoticia, text);
 
                 return Ok(noticias);
             }
