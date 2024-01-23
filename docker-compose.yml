@@ -27,7 +27,7 @@ services:
   notigest:
     image: 'gustavovl/notigest-front:main'
     environment:
-      - apiUrl=https://localhost:7086/api/v1
+      - API_URL=https://localhost:7086/api/v1
     restart: always
     ports:
       - 80:80
