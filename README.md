@@ -35,9 +35,6 @@ para su ejecucion local puede obtar por usar el docker-compose con el comando 'd
 
 el proyecto back esta desarrollado con .net 8 y el del front node 20 y angular 17 y tener en cuenta el uso tanto de redis cache desde un container de docker y las configuraciones en las URL y conexiones a la base de datos del back 
 
-1- primero que nada generando la migration con el comando 'migrations add InicialCreate --output-dir Migrations/notigest --context NotiGestDbContext --project Infrastructure --startup-project NotiGest' este paso no es necesario 
-2- 'dotnet ef database update --context NotiGestDbContext --project Infrastructure --startup-project NotiGest'
-
 [proyecto front](https://github.com/gustavo1020/NotiGestFront)
 1- para este proyecto primero usar el npm install y despues el ng serve
 
