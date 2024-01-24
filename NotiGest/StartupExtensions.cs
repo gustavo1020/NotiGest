@@ -62,18 +62,18 @@ namespace NotiGest
 
         public static void AddDBConfiguration(this IServiceCollection services, WebApplicationBuilder webApplication)
         {
-            services.AddDbContext<NotiGestDbContext>(ops => ops.UseSqlServer("name=NotiGestConnection"));
-            services.AddHangfire(x => x.UseSqlServerStorage(webApplication.Configuration.GetConnectionString("NotiGestConnection"), options: new SqlServerStorageOptions
-            {
-                PrepareSchemaIfNecessary = true,
-                SchemaName = "hangfire"
-            }));
+            services.AddHangfire(x => x.UseSqlServerStorage(webApplication.Configuration.GetConnectionString("Hangfire"), options: new SqlServerStorageOptions { PrepareSchemaIfNecessary = true }));
             var contextBuilderOptions = new DbContextOptionsBuilder<HangfireContext>();
             contextBuilderOptions.UseSqlServer(webApplication.Configuration.GetConnectionString("Hangfire"));
             var hangfireContext = new HangfireContext(contextBuilderOptions.Options);
+            hangfireContext.Database.EnsureCreated();
 
+            services.AddDbContext<NotiGestDbContext>(ops => ops.UseSqlServer(webApplication.Configuration.GetConnectionString("NotiGestConnection")));
             services.AddScoped<DbContext, NotiGestDbContext>();
-            services.AddScoped<DbContext, HangfireContext>();
+            var cbo = new DbContextOptionsBuilder<NotiGestDbContext>();
+            cbo.UseSqlServer(webApplication.Configuration.GetConnectionString("NotiGestConnection"));
+            var context = new NotiGestDbContext(cbo.Options);
+            context.Database.EnsureCreated();
         }
 
         public static void AddCorsConfiguration(this IServiceCollection services, WebApplicationBuilder webApplication)
