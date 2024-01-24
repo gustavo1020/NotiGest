@@ -28,7 +28,7 @@ Además, la aplicación incluye una integración con Entity Framework (EF) para 
 Configurar conexion a bd y tener redis cache y para front configurar URL (Si utiiza el usuario admin(Gustavo@admin.com - Password123456---) puede ver el contenido de /usuarios)
 
 
--- No disponible
+-- No disponible docker
 A continuación, se proporciona información sobre la configuración necesaria para ejecutar la aplicación localmente y para su despliegue, actualmente tiene un action que se encarga de ejecutar el dockerfile y subir la imagen al registry de docker
 
 para su ejecucion local puede obtar por usar el docker-compose con el comando 'docker-compose up -d' y levantar el entorno de pruebas (recuerde crear la network con 'docker network create NotiGest')o ejecutar los proyectos individuales 
