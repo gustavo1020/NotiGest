@@ -1,5 +1,5 @@
 # NotiGest
-
+ 
 ## Descripción
 
 Este proyecto es una aplicación basada en .NET Core que utiliza una arquitectura en capas para separar la accesibilidad de la data. Se ha implementado la librería Mapster para la transformación eficiente de datos, Hangfire para la ejecución de tareas en segundo plano (como la inserción de noticias), y Fluent Validation para la validación de endpoints.
