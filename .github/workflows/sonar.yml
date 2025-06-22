@@ -38,13 +38,12 @@ jobs:
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         shell: powershell
         run: |
-          dotnet tool install --global dotnet-sonarscanner
+          New-Item -Path .\.sonar\scanner -ItemType Directory
+          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
 
       - name: Build and analyze
         shell: powershell
         run: |
-          dotnet-sonarscanner begin /k:"gustavo1020_NotiGest_5cbb8fe6-63b1-414a-963b-23b86df95d20" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
-          cd NotiGest
-          dotnet restore
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"gustavo1020_NotiGest_5cbb8fe6-63b1-414a-963b-23b86df95d20" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
           dotnet build
-          dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
