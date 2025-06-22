@@ -43,7 +43,8 @@ jobs:
       - name: Build and analyze
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"gustavo1020_Amarte_1836c6b7-571b-4ec7-a4fd-93cc1c54e1e4" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"gustavo1020_NotiGest_5cbb8fe6-63b1-414a-963b-23b86df95d20" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          cd NotiGest
           dotnet restore
           dotnet build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
