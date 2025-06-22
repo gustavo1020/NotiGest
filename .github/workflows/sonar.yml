@@ -4,6 +4,9 @@ on:
   pull_request:
      branches:
      - main
+  push:
+    branches:
+      - main
 
 jobs:
  sonar-test:
@@ -17,6 +20,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: 17
+          distribution: 'zulu'
           
       - name: Cache SonarQube packages
         uses: actions/cache@v4
@@ -43,8 +47,6 @@ jobs:
       - name: Build and analyze
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"gustavo1020_NotiGest_5cbb8fe6-63b1-414a-963b-23b86df95d20" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
-          cd NotiGest
-          dotnet restore
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"gustavo1020_NotiGest_5cbb8fe6-63b1-414a-963b-23b86df95d20" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
           dotnet build
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
