@@ -41,6 +41,18 @@ namespace NotiGest.Controllers
 
                 var userRol = await _userManager.AddToRoleAsync(entityUser, "UserDefault");
 
+                userRol = await _userManager.AddToRoleAsync(entityUser, "UserDefault");
+
+                userRol = await _userManager.AddToRoleAsync(entityUser, "UserDefault");
+
+                userRol = await _userManager.AddToRoleAsync(entityUser, "UserDefault");
+
+                userRol = await _userManager.AddToRoleAsync(entityUser, "UserDefault");
+
+                userRol = await _userManager.AddToRoleAsync(entityUser, "UserDefault");
+
+                userRol = await _userManager.AddToRoleAsync(entityUser, "UserDefault");
+
                 if (!userRol.Succeeded) return BadRequest($"Error al relacionarel usuarioRol {userRol.Errors}");
 
                 return Ok("Registro Exitoso");
